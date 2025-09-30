@@ -1,4 +1,4 @@
-export const CommentInfo = ({ post }) => {
+export const CommentInfo = ({ post = {} }) => {
   const { comment } = post;
 
   return (

@@ -12,13 +12,13 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo post={post} />
+          <UserInfo user={post.user} />
         </p>
       </div>
 
       <p className="PostInfo__body">{post.body}</p>
       <hr />
-      <CommentList post={post} />
+      <CommentList comments={post.comments} />
     </div>
   );
 };
