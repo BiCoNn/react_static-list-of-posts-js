@@ -3,7 +3,10 @@ import { UserInfo } from '../UserInfo';
 
 import './PostInfo.scss';
 
-export const PostInfo = ({ post }) => {
+export const PostInfo = ({ post = {} }) => {
+  const user = post.user || {};
+  const comments = post.comments || [];
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -12,13 +15,13 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={post.user} />
+          <UserInfo user={user} />
         </p>
       </div>
 
       <p className="PostInfo__body">{post.body}</p>
       <hr />
-      <CommentList comments={post.comments} />
+      <CommentList comments={comments} />
     </div>
   );
 };

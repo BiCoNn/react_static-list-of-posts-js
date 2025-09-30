@@ -1,6 +1,4 @@
-export const CommentInfo = ({ post = {} }) => {
-  const { comment } = post;
-
+export const CommentInfo = ({ comment = {} }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
